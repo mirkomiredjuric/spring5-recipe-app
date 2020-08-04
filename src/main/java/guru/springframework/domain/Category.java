@@ -15,6 +15,13 @@ public class Category {
     @ManyToMany(mappedBy = "categories")
     private Set<Recipe> recipes;
 
+    public Category() {
+    }
+
+    public Category(String description){
+        this.description = description;
+    }
+
     public Long getId() {
         return id;
     }
